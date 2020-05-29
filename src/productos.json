@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "nombre":"Blink TOUR 2020",
+        "imagen": "/img/blink1.jpg",
+        "talla": "XL SM",
+        "precio": 182
+    },
+    {
+        "id":2,
+        "nombre":"Blink KINGS OF THE WEEEKEND",
+        "imagen": "/img/blink2.jpg",
+        "talla": "XL SM",
+        "precio": 221
+
+    },
+    {
+        "id":3,
+        "nombre":"Blink BLUE ABSENT LOGO",
+        "imagen": "/img/blink3.jpg",
+        "talla": "XL SM M",
+        "precio": 200
+
+    },{
+        "id":4,
+        "nombre":"Blink B&W SINCE 1992",
+        "imagen": "/img/blink4.jpg",
+        "talla": "SM",
+        "precio": 172
+
+    },{
+        "id":5,
+        "nombre":"Blink CLASSIC WOMAN",
+        "imagen": "/img/blink5.jpg",
+        "talla": "XL SM",
+        "precio": 232
+
+    },{
+        "id":6,
+        "nombre":"Blink WHITE ONE EIGHTY TWO",
+        "imagen": "/img/blink6.jpg",
+        "talla": "XL SM M",
+        "precio": 180
+
+    },{
+        "id":7,
+        "nombre":"Blink I F*CK YOU SINCE 92",
+        "imagen": "/img/blink7.jpg",
+        "talla": "XL SM",
+        "precio": 262
+
+    },{
+        "id":8,
+        "nombre":"Blink WHITE CLASSIC",
+        "imagen": "/img/blink8.jpg",
+        "talla": "XL SM",
+        "precio": 282
+
+    },{
+        "id":9,
+        "nombre":"Blink WILD FONTS DARK",
+        "imagen": "/img/blink9.jpg",
+        "talla": "XL SM",
+        "precio": 182
+
+    },{
+        "id":10,
+        "nombre":"Blink BLACK SUBURBIA",
+        "imagen": "/img/blink10.jpg",
+        "talla": "XL SM M",
+        "precio": 200
+
+    }
+]
