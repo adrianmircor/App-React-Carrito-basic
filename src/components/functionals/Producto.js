@@ -15,16 +15,6 @@ const Producto = (props) => {
     agregarMismoProducto,
   } = useContext(productoContext);
 
-  //Serviria para calculo de stock
-  const [producto, setProducto] = useState({
-    id,
-    nombre,
-    imagen,
-    precio,
-    talla,
-    cantidad: 0,
-  });
-
   //Los productos que iran a carrito se le asignan 1,
   //ya que al hacerle click en añadir al carrito recien se inicializan en 1
   const [productoCarrito, setProductoCarrito] = useState({
@@ -33,22 +23,19 @@ const Producto = (props) => {
     imagen: imagen,
     precio: precio,
     talla: talla,
-    cantidad: 1,
+    cantidad: 0,
   });
 
   const handleAnadir = () => {
     if (listaproductos.length === 0) {
       console.log("se agrega");
-      setProductoCarrito({
-        ...productoCarrito,
-        cantidad: productoCarrito.cantidad + 1,
-      });
+
+      productoCarrito.cantidad++;
       agregarNuevoProducto(productoCarrito);
-      console.log(producto);
       console.log(listaproductos);
     } else {
       const productoEncontrado = listaproductos.find(
-        (element) => element.id == producto.id
+        (element) => element.id == id
       );
 
       console.log("ProductoEncontrado: ", productoEncontrado);
@@ -56,19 +43,14 @@ const Producto = (props) => {
 
       if (productoEncontrado) {
         //Si se añade del mismo id, agregar cantidad
-        console.log("se modifica");
-        setProductoCarrito({
-          ...productoCarrito,
-          cantidad: productoCarrito.cantidad + 1,
-        });
+        productoCarrito.cantidad++;
+
         agregarMismoProducto(productoCarrito);
       } else {
         //Si es distinto id, agregar producto
         console.log("se agrega");
-        setProductoCarrito({
-          ...productoCarrito,
-          cantidad: productoCarrito.cantidad + 1,
-        });
+        productoCarrito.cantidad++;
+
         agregarNuevoProducto(productoCarrito);
       }
     }
