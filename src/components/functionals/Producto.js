@@ -1,7 +1,5 @@
 import React, { useState, useContext } from "react";
 
-import Carrito from "../functionals/Carrito";
-
 //Importanto el Context, que es quien comparte el initialState y funciones a los de+
 import productoContext from "../../context/productoContext";
 
@@ -13,6 +11,8 @@ const Producto = (props) => {
     listaproductos,
     agregarNuevoProducto,
     agregarMismoProducto,
+    opencarrito,
+    modificarEstadoCarrito,
   } = useContext(productoContext);
 
   //Los productos que iran a carrito se le asignan 1,
@@ -54,6 +54,21 @@ const Producto = (props) => {
         agregarNuevoProducto(productoCarrito);
       }
     }
+
+    //Cada vez q se añade, abrir el carrito
+    if (opencarrito) {
+      document.getElementById("li_id").classList.add("show");
+      document.getElementById("carritoProductos").classList.add("show");
+      /* document.getElementById("sanguchito").classList.remove("collapsed");
+      document.getElementById("navbarTogglerDemo01").classList.add("show"); */
+    }
+  };
+
+  const SeleccionProducto = (event) => {
+    event.preventDefault();
+    console.log("XD2");
+    document.getElementById("li_id").classList.add("show");
+    document.getElementById("carritoProductos").classList.add("show");
   };
 
   return (
@@ -73,6 +88,7 @@ const Producto = (props) => {
           <p className="card-textual">Precio: S/ {precio}</p>
           <div className="container d-flex justify-content-center">
             <button
+              id="botonAnadir"
               className="btn btn-primary mt-2"
               onClick={() => handleAnadir()}
             >

@@ -6,7 +6,7 @@ const Board = () => {
 
 
   return (
-    <div>
+    <div className="board">
       <section className="container mt-4 mb-5">
         <div className="card-deck mt-4">
           <ListaProductos></ListaProductos>

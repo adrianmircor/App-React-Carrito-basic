@@ -1,6 +1,7 @@
 import {
   AGREGAR_NUEVO_PRODUCTO,
   AGREGAR_MISMO_PRODUCTO,
+  MODIFICAR_ESTADO_CARRITO
 } from "../utils/constants";
 
 export default (state, action) => {
@@ -33,6 +34,11 @@ export default (state, action) => {
           }
         }),
       }; */
+      case MODIFICAR_ESTADO_CARRITO:
+      return {
+        ...state,
+        opencarrito: action.payload
+        }
 
     default:
       return state;

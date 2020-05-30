@@ -1,9 +1,16 @@
 /*Eliminar scroll horizontal*/
-body {
+.board {
+  margin-top: 85px;
 }
 
 .navbar {
   background-color: rgb(192, 191, 191);
+
+  width: 100%;
+  position: fixed;
+  top: 0px;
+
+  z-index: 100; /*permite que esté delante de los demas elementos*/
 }
 .navbar-brand {
   padding-top: 2px;
@@ -23,6 +30,9 @@ body {
   }
   .navbar-nav {
     width: 360px;
+  }
+  .board {
+    margin-top: 105px;
   }
 }
 
@@ -44,6 +54,7 @@ body {
   .nav-link {
     margin-right: 150px;
   }
+
   .carritoProductos {
     width: 280px;
   }
@@ -75,17 +86,16 @@ body {
 }
 
 /*Lista de productos guardados en el carrito*/
-.carritoProductos{
-  padding:0px;
+.carritoProductos {
+  padding: 0px;
 }
 .row {
   width: 100%; /*Ocupa el 100% del div de su padre*/
   margin: 0px;
 }
 .header-prod-carrito {
-  height: 40px;
+  height: 25px;
   background-color: #2a7886;
-  
 }
 @media screen and (min-width: 768px) {
   .carritoProductos {
@@ -116,7 +126,6 @@ body {
   border-color: transparent;
   background-color: transparent;
   border: 0px;
-
 }
 .btnVaciarCarrito:hover,
 .btnVaciarCarrito:active,
@@ -126,7 +135,6 @@ body {
   border-color: transparent; /*Cuando se acerca el mouse al boton*/
   outline: none; /*Quita el borde cuando se hace click*/
 }
-
 
 .imgVaciar {
   background-color: yellow;
@@ -169,14 +177,14 @@ body {
 
 @media screen and (max-width: 325px) {
   .productos-del-carrito {
-    height: 190px;
+    height: 140px;
     overflow: auto;
   }
 }
 
 @media screen and (min-width: 325px) {
   .productos-del-carrito {
-    height: 295px;
+    height: 245px;
     overflow: auto;
   }
 }
@@ -240,14 +248,14 @@ hr {
   padding: 0px;
   width: 16px;
 }
-.btne-add{
+.btne-add {
   background-color: rgb(21, 177, 21);
 }
-.btne-decre{
-  background-color: rgb(255, 255, 0)
+.btne-decre {
+  background-color: rgb(255, 255, 0);
 }
-.btne-remove{
-  background-color: rgb(199, 18, 18)
+.btne-remove {
+  background-color: rgb(199, 18, 18);
 }
 
 /*FOOTER DE CARRITO*/
@@ -260,7 +268,6 @@ hr {
   margin-bottom: 5px;
   width: 100%;
   color: white;
-  
 }
 
 .btnPagar:hover,
@@ -275,9 +282,9 @@ p {
   margin: 0px;
 }
 
-.footerPago{
+.footerPago {
   background-color: #2a7886;
 }
-span{
+span {
   font-weight: bold;
 }
