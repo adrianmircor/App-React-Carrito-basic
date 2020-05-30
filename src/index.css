@@ -108,6 +108,7 @@
   word-wrap: break-word; /*SALTE A OTRA LINEA SI NO CABE EN DIV*/
   font-size: 18px;
   display: inline;
+  font-weight: bolder;
 }
 .btnCerrarCarrito {
   border-color: transparent;
@@ -182,10 +183,19 @@
   }
 }
 
-@media screen and (min-width: 325px) {
+@media screen and (min-width: 326px) {
   .productos-del-carrito {
-    height: 245px;
+    height: 150px;
     overflow: auto;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .productos-del-carrito {
+    height: 300px;
+    overflow: auto;
+
   }
 }
 
@@ -287,4 +297,17 @@ p {
 }
 span {
   font-weight: bold;
+}
+
+.total,
+.costo{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cont-total{
+  margin-left: 15%;
+}
+.cont-costo{
+  margin-right: 15%;
 }

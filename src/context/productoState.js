@@ -5,7 +5,9 @@ import productoReducer from "./productoReducer";
 import {
     AGREGAR_NUEVO_PRODUCTO,
     AGREGAR_MISMO_PRODUCTO,
-    MODIFICAR_ESTADO_CARRITO
+    MODIFICAR_ESTADO_CARRITO,
+    VACIAR_CARRITO,
+    ELIMINAR_PRODUCTO
 } from '../utils/constants'
 
 const ProductoState = (props) => {
@@ -41,6 +43,19 @@ const ProductoState = (props) => {
         })
     }
 
+    const vaciarCarrito = () => {
+        dispatch({
+            type:VACIAR_CARRITO,
+        })
+    }
+    
+    const eliminarProductoCarrito = (id) => {
+        dispatch({
+            type: ELIMINAR_PRODUCTO,
+            payload: id
+        })
+    }
+
     return (  
         <productoContext.Provider
             value={{
@@ -49,7 +64,9 @@ const ProductoState = (props) => {
                 
                 agregarNuevoProducto,
                 agregarMismoProducto,
-                modificarEstadoCarrito
+                modificarEstadoCarrito,
+                vaciarCarrito,
+                eliminarProductoCarrito
             }}>
             
             {props.children}

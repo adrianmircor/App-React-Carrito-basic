@@ -28,18 +28,12 @@ const Producto = (props) => {
 
   const handleAnadir = () => {
     if (listaproductos.length === 0) {
-      console.log("se agrega");
-
       productoCarrito.cantidad++;
       agregarNuevoProducto(productoCarrito);
-      console.log(listaproductos);
     } else {
       const productoEncontrado = listaproductos.find(
         (element) => element.id == id
       );
-
-      console.log("ProductoEncontrado: ", productoEncontrado);
-      console.log("listaProductos: ", listaproductos);
 
       if (productoEncontrado) {
         //Si se añade del mismo id, agregar cantidad
@@ -48,7 +42,6 @@ const Producto = (props) => {
         agregarMismoProducto(productoCarrito);
       } else {
         //Si es distinto id, agregar producto
-        console.log("se agrega");
         productoCarrito.cantidad++;
 
         agregarNuevoProducto(productoCarrito);
@@ -62,13 +55,6 @@ const Producto = (props) => {
       /* document.getElementById("sanguchito").classList.remove("collapsed");
       document.getElementById("navbarTogglerDemo01").classList.add("show"); */
     }
-  };
-
-  const SeleccionProducto = (event) => {
-    event.preventDefault();
-    console.log("XD2");
-    document.getElementById("li_id").classList.add("show");
-    document.getElementById("carritoProductos").classList.add("show");
   };
 
   return (
